@@ -124,4 +124,114 @@ function verificarAlertas(consumo) {
         if (Math.random() < 0.2) {
             agregarAlerta('✅ Consumo óptimo. ¡Sigue así!', 'success');
             alertaGenerada = true;
-            mostrarRecomendacion('Tu consumo está en niveles excelentes. Comparte tus há
+            mostrarRecomendacion('Tu consumo está en niveles excelentes. Comparte tus hábitos con tu familia.');
+        }
+    }
+    
+    // Simular detección de falla ocasional
+    if (Math.random() < 0.05 && !alertaGenerada) {
+        agregarAlerta('⚠️ Posible fuga de corriente detectada. Se recomienda revisión técnica.', 'danger');
+        mostrarRecomendacion('Contacta a un electricista para revisar el cableado de tu hogar.');
+    }
+    
+    // Limpiar alertas si hay muchas
+    if (alertasList.children.length > 5) {
+        while (alertasList.children.length > 3) {
+            alertasList.removeChild(alertasList.lastChild);
+        }
+    }
+}
+
+// Agregar alerta al panel
+function agregarAlerta(mensaje, tipo) {
+    const alertaDiv = document.createElement('div');
+    alertaDiv.className = `alerta alerta-${tipo}`;
+    alertaDiv.innerHTML = `
+        <i class="fas ${tipo === 'warning' ? 'fa-exclamation-triangle' : tipo === 'danger' ? 'fa-bug' : 'fa-check-circle'}"></i>
+        <span>${mensaje}</span>
+        <small>${new Date().toLocaleTimeString()}</small>
+    `;
+    alertaDiv.style.display = 'flex';
+    alertaDiv.style.justifyContent = 'space-between';
+    alertaDiv.style.alignItems = 'center';
+    alertaDiv.style.flexWrap = 'wrap';
+    alertaDiv.style.gap = '8px';
+    
+    alertasList.insertBefore(alertaDiv, alertasList.firstChild);
+    
+    // Auto-remover después de 15 segundos
+    setTimeout(() => {
+        if (alertaDiv.parentNode) {
+            alertaDiv.remove();
+        }
+    }, 15000);
+}
+
+// Mostrar recomendación
+function mostrarRecomendacion(mensaje) {
+    recomendacionEl.textContent = mensaje;
+    recomendacionEl.style.opacity = '0';
+    setTimeout(() => {
+        recomendacionEl.style.transition = 'opacity 0.3s';
+        recomendacionEl.style.opacity = '1';
+    }, 10);
+}
+
+// Iniciar simulación
+function iniciarSimulacion() {
+    actualizarDashboard();
+    setInterval(actualizarDashboard, 3000); // Actualizar cada 3 segundos
+}
+
+// Menú móvil
+document.querySelector('.menu-toggle').addEventListener('click', () => {
+    document.querySelector('.nav-menu').classList.toggle('active');
+});
+
+// Cerrar menú al hacer clic en un enlace
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.nav-menu').classList.remove('active');
+    });
+});
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Iniciar cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+    iniciarSimulacion();
+    
+    // Efecto de fade in al scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    document.querySelectorAll('section > .container').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+});
