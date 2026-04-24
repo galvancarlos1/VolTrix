@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VolTrix - Sistema Inteligente de Monitoreo Energético</title>
+    <title>VolTrix | Solución Inteligente de Monitoreo Energético</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Header / Navegación -->
+    <!-- Header Profesional -->
     <header class="header">
         <nav class="nav container">
             <div class="logo">
                 <i class="fas fa-bolt"></i>
                 <span>VolTrix</span>
+                <span class="badge">IoT Solution</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#problema">Problema</a></li>
-                <li><a href="#solucion">Solución</a></li>
-                <li><a href="#objetivos">Objetivos</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#como-funciona">Cómo Funciona</a></li>
                 <li><a href="#demo">Demo</a></li>
-                <li><a href="#equipo">Equipo</a></li>
+                <li><a href="#precios">Precios</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#contacto" class="btn-contacto">Contratar</a></li>
             </ul>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
@@ -30,143 +34,163 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section con Propuesta de Valor -->
     <section id="inicio" class="hero">
         <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Sistema inteligente para el <span class="highlight">monitoreo y optimización</span> del consumo energético</h1>
-                <p>Reduce tu factura de electricidad, detecta fallas en el cableado y contribuye al ahorro energético en tu hogar.</p>
-                <div class="hero-buttons">
-                    <a href="#demo" class="btn btn-primary">Ver Demo <i class="fas fa-arrow-right"></i></a>
-                    <a href="https://github.com/tuusuario/VolTrix" target="_blank" class="btn btn-outline">GitHub <i class="fab fa-github"></i></a>
+            <div class="hero-text" data-aos="fade-right">
+                <div class="hero-badge">
+                    <i class="fas fa-certificate"></i>
+                    <span>Líder en monitoreo energético 2026</span>
                 </div>
-            </div>
-            <div class="hero-image">
-                <div class="energy-meter">
-                    <div class="meter-circle">
-                        <div class="meter-value">0</div>
-                        <div class="meter-label">kWh</div>
+                <h1>Reduce hasta un <span class="highlight">50%</span> tu factura de luz con <span class="highlight">inteligencia artificial</span></h1>
+                <p>VolTrix es el sistema inteligente que monitorea, analiza y optimiza el consumo eléctrico de tu hogar en tiempo real. Detecta fallas antes de que ocurran y ahorra dinero automáticamente.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="number">500+</span>
+                        <span class="label">Hogares conectados</span>
                     </div>
-                    <div class="meter-status">Consumo en tiempo real</div>
+                    <div class="stat">
+                        <span class="number">40%</span>
+                        <span class="label">Ahorro promedio</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">24/7</span>
+                        <span class="label">Monitoreo continuo</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn btn-primary">Solicitar Demo Gratis <i class="fas fa-arrow-right"></i></a>
+                    <a href="#como-funciona" class="btn btn-outline">Ver Video <i class="fas fa-play"></i></a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left">
+                <div class="dashboard-preview">
+                    <img src="assets/dashboard-preview.png" alt="Dashboard VolTrix" onerror="this.src='https://via.placeholder.com/500x400/1a73e8/white?text=Dashboard+VolTrix'">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Problema Section -->
-    <section id="problema" class="problema">
+    <!-- Clientes / Confianza -->
+    <section class="clientes">
         <div class="container">
-            <div class="section-header">
-                <h2>El Problema</h2>
-                <p>¿Por qué es necesario VolTrix?</p>
-            </div>
-            <div class="problema-grid">
-                <div class="problema-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Facturas elevadas</h3>
-                    <p>Muchas familias reciben facturas de luz altas sin entender por qué, afectando su economía.</p>
-                </div>
-                <div class="problema-card">
-                    <i class="fas fa-bug"></i>
-                    <h3>Fallas no detectadas</h3>
-                    <p>El cableado defectuoso o sobrecargas pasan desapercibidas hasta que causan daños mayores.</p>
-                </div>
-                <div class="problema-card">
-                    <i class="fas fa-eye-slash"></i>
-                    <h3>Falta de visibilidad</h3>
-                    <p>Los usuarios no tienen acceso a información en tiempo real sobre su consumo eléctrico.</p>
-                </div>
+            <p>Confían en VolTrix</p>
+            <div class="clientes-logos">
+                <i class="fas fa-building"></i>
+                <i class="fas fa-church"></i>
+                <i class="fas fa-school"></i>
+                <i class="fas fa-hospital"></i>
+                <i class="fas fa-home"></i>
             </div>
         </div>
     </section>
 
-    <!-- Justificación Section -->
-    <section class="justificacion">
+    <!-- Beneficios (Por qué elegirnos) -->
+    <section id="beneficios" class="beneficios">
         <div class="container">
-            <div class="justificacion-content">
-                <div class="justificacion-text">
-                    <h2>¿Por qué es importante?</h2>
-                    <p>VolTrix nace de la necesidad de brindar a las familias, especialmente a aquellas de <strong>comunidades de bajos recursos</strong>, una herramienta accesible que les permita controlar su consumo eléctrico.</p>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Reduce el gasto económico en electricidad</li>
-                        <li><i class="fas fa-check-circle"></i> Previene riesgos eléctricos en el hogar</li>
-                        <li><i class="fas fa-check-circle"></i> Promueve el uso eficiente de la energía</li>
-                        <li><i class="fas fa-check-circle"></i> Impacto positivo en comunidades vulnerables</li>
-                    </ul>
+            <div class="section-header" data-aos="fade-up">
+                <h2>¿Por qué elegir VolTrix?</h2>
+                <p>La solución más completa y accesible del mercado</p>
+            </div>
+            <div class="beneficios-grid">
+                <div class="beneficio-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="beneficio-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Ahorro Garantizado</h3>
+                    <p>Identifica qué electrodomésticos consumen más y recibe recomendaciones personalizadas para reducir tu factura.</p>
+                    <div class="beneficio-stats">Ahorro: <strong>30-50%</strong></div>
                 </div>
-                <div class="justificacion-img">
-                    <i class="fas fa-hand-holding-heart"></i>
+                <div class="beneficio-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="beneficio-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Seguridad Eléctrica</h3>
+                    <p>Detecta sobrecargas, cortocircuitos y fallas en el cableado antes de que causen daños o incendios.</p>
+                    <div class="beneficio-stats">Alertas: <strong>En tiempo real</strong></div>
+                </div>
+                <div class="beneficio-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="beneficio-icon"><i class="fas fa-microchip"></i></div>
+                    <h3>Tecnología IoT</h3>
+                    <p>Sensores de bajo costo, instalación sencilla y datos en la nube accesibles desde cualquier dispositivo.</p>
+                    <div class="beneficio-stats">Hardware: <strong>$19.99 USD</strong></div>
+                </div>
+                <div class="beneficio-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="beneficio-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Impacto Ambiental</h3>
+                    <p>Reduce tu huella de carbono y contribuye al cuidado del planeta con un consumo más eficiente.</p>
+                    <div class="beneficio-stats">CO₂ reducido: <strong>~2 ton/año</strong></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solución Section -->
-    <section id="solucion" class="solucion">
+    <!-- Comparativa vs Competencia -->
+    <section class="comparativa">
         <div class="container">
-            <div class="section-header">
-                <h2>Nuestra Solución</h2>
-                <p>¿Cómo funciona VolTrix?</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2>VolTrix vs La Competencia</h2>
+                <p>Por qué somos la mejor opción</p>
             </div>
-            <div class="solucion-grid">
-                <div class="solucion-card">
-                    <div class="step-number">1</div>
-                    <i class="fas fa-microchip"></i>
-                    <h3>Sensores Inteligentes</h3>
-                    <p>Dispositivos conectados al sistema eléctrico que miden consumo en tiempo real.</p>
-                </div>
-                <div class="solucion-card">
-                    <div class="step-number">2</div>
-                    <i class="fas fa-cloud-upload-alt"></i>
-                    <h3>Datos en la Nube</h3>
-                    <p>Los datos se envían a nuestra plataforma para su análisis y procesamiento.</p>
-                </div>
-                <div class="solucion-card">
-                    <div class="step-number">3</div>
-                    <i class="fas fa-chart-pie"></i>
-                    <h3>Dashboard Inteligente</h3>
-                    <p>Visualiza tu consumo, recibe alertas y sigue recomendaciones personalizadas.</p>
-                </div>
+            <div class="comparativa-table" data-aos="fade-up">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>VolTrix</th>
+                            <th>Sense</th>
+                            <th>Efergy</th>
+                            <th>Owl</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Precio</td><td class="check">$19.99</td><td>$299</td><td>$149</td><td>$99</td></tr>
+                        <tr><td>Monitoreo en tiempo real</td><td class="check">✅</td><td class="check">✅</td><td class="check">✅</td><td class="check">✅</td></tr>
+                        <tr><td>Alertas de fallas eléctricas</td><td class="check">✅</td><td class="check">✅</td><td class="cross">❌</td><td class="cross">❌</td></tr>
+                        <tr><td>Recomendaciones con IA</td><td class="check">✅</td><td class="check">✅</td><td class="cross">❌</td><td class="cross">❌</td></tr>
+                        <tr><td>Dashboard en español</td><td class="check">✅</td><td class="cross">❌</td><td class="check">✅</td><td class="cross">❌</td></tr>
+                        <tr><td>Soporte técnico 24/7</td><td class="check">✅</td><td class="cross">❌</td><td class="cross">❌</td><td class="cross">❌</td></tr>
+                        <tr><td>Envío gratis a toda Colombia</td><td class="check">✅</td><td class="cross">❌</td><td class="cross">❌</td><td class="cross">❌</td></tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
 
-    <!-- Objetivos Section -->
-    <section id="objetivos" class="objetivos">
+    <!-- Cómo Funciona -->
+    <section id="como-funciona" class="como-funciona">
         <div class="container">
-            <div class="section-header">
-                <h2>Objetivos</h2>
-                <p>Lo que buscamos lograr con VolTrix</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2>Tecnología Simple y Efectiva</h2>
+                <p>3 pasos para empezar a ahorrar</p>
             </div>
-            <div class="objetivos-grid">
-                <div class="objetivo-card">
-                    <i class="fas fa-bullseye"></i>
-                    <h3>Objetivo General</h3>
-                    <p>Desarrollar un sistema inteligente que permita monitorear, analizar y optimizar el consumo de energía eléctrica en hogares.</p>
+            <div class="pasos-grid">
+                <div class="paso-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="paso-number">1</div>
+                    <i class="fas fa-plug"></i>
+                    <h3>Instalación</h3>
+                    <p>Conecta el sensor VolTrix a tu tablero eléctrico. Instalación sencilla en 10 minutos.</p>
                 </div>
-                <div class="objetivo-card">
-                    <i class="fas fa-list-check"></i>
-                    <h3>Objetivos Específicos</h3>
-                    <ul>
-                        <li>Medir consumo eléctrico en tiempo real</li>
-                        <li>Mostrar consumo en términos económicos</li>
-                        <li>Alertar sobre consumos elevados</li>
-                        <li>Detectar fallas en el cableado</li>
-                        <li>Proporcionar recomendaciones de ahorro</li>
-                    </ul>
+                <div class="paso-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="paso-number">2</div>
+                    <i class="fas fa-wifi"></i>
+                    <h3>Conecta a WiFi</h3>
+                    <p>El dispositivo se conecta automáticamente a tu red y comienza a enviar datos a la nube.</p>
+                </div>
+                <div class="paso-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="paso-number">3</div>
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Monitorea y Ahorra</h3>
+                    <p>Accede a tu dashboard desde cualquier dispositivo y recibe alertas en tu celular.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Dashboard Demo Section -->
+    <!-- Dashboard Demo Interactivo -->
     <section id="demo" class="demo">
         <div class="container">
-            <div class="section-header">
-                <h2>Dashboard en Vivo</h2>
-                <p>Simulación del monitoreo en tiempo real</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2>Dashboard en Tiempo Real</h2>
+                <p>Así se ve el control de tu hogar</p>
             </div>
-            <div class="dashboard">
+            <div class="dashboard" data-aos="fade-up">
                 <div class="dashboard-stats">
                     <div class="stat-card">
                         <i class="fas fa-bolt"></i>
@@ -180,16 +204,8 @@
                         <i class="fas fa-dollar-sign"></i>
                         <div class="stat-info">
                             <span class="stat-label">Costo Estimado</span>
-                            <span class="stat-value" id="costo-actual">0.00</span>
+                            <span class="stat-value" id="costo-actual">0</span>
                             <span class="stat-unit">COP/hora</span>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <i class="fas fa-calendar-day"></i>
-                        <div class="stat-info">
-                            <span class="stat-label">Consumo Hoy</span>
-                            <span class="stat-value" id="consumo-hoy">0.00</span>
-                            <span class="stat-unit">kWh</span>
                         </div>
                     </div>
                     <div class="stat-card">
@@ -200,6 +216,14 @@
                             <span class="stat-unit">%</span>
                         </div>
                     </div>
+                    <div class="stat-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <div class="stat-info">
+                            <span class="stat-label">Estado</span>
+                            <span class="stat-value" id="estado">Óptimo</span>
+                            <span class="stat-unit">sistema</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="dashboard-chart">
                     <canvas id="consumoChart"></canvas>
@@ -207,49 +231,246 @@
                 <div class="alertas-container">
                     <div class="alertas-header">
                         <i class="fas fa-bell"></i>
-                        <h3>Alertas del Sistema</h3>
+                        <h3>Alertas Inteligentes</h3>
                     </div>
                     <div id="alertas-list" class="alertas-list">
-                        <div class="alerta-success">✅ Sistema funcionando correctamente</div>
-                    </div>
-                </div>
-                <div class="recomendaciones">
-                    <i class="fas fa-lightbulb"></i>
-                    <div class="recomendacion-text" id="recomendacion">
-                        Conecta dispositivos para recibir recomendaciones personalizadas
+                        <div class="alerta-success">✅ Sistema VolTrix activo y monitoreando</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Equipo Section -->
+    <!-- Planes y Precios -->
+    <section id="precios" class="precios">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Planes para Cada Necesidad</h2>
+                <p>Elige el que mejor se adapte a ti</p>
+            </div>
+            <div class="precios-grid">
+                <div class="plan-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="plan-header">
+                        <h3>Básico</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">19.99</span>
+                            <span class="period">/mes</span>
+                        </div>
+                        <p>Ideal para apartamentos</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> 1 sensor incluido</li>
+                        <li><i class="fas fa-check"></i> Dashboard básico</li>
+                        <li><i class="fas fa-check"></i> Alertas por email</li>
+                        <li><i class="fas fa-check"></i> Historial 30 días</li>
+                        <li class="na"><i class="fas fa-times"></i> Detección de fallas</li>
+                        <li class="na"><i class="fas fa-times"></i> Soporte prioritario</li>
+                    </ul>
+                    <a href="#contacto" class="btn-plan">Contratar</a>
+                </div>
+                <div class="plan-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="popular-badge">Más popular</div>
+                    <div class="plan-header">
+                        <h3>Pro</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">39.99</span>
+                            <span class="period">/mes</span>
+                        </div>
+                        <p>Para hogares familiares</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> 3 sensores incluidos</li>
+                        <li><i class="fas fa-check"></i> Dashboard avanzado</li>
+                        <li><i class="fas fa-check"></i> Alertas SMS + email</li>
+                        <li><i class="fas fa-check"></i> Historial ilimitado</li>
+                        <li><i class="fas fa-check"></i> Detección de fallas</li>
+                        <li><i class="fas fa-check"></i> Soporte 24/7</li>
+                    </ul>
+                    <a href="#contacto" class="btn-plan btn-primary">Comenzar ahora</a>
+                </div>
+                <div class="plan-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="plan-header">
+                        <h3>Empresarial</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">99.99</span>
+                            <span class="period">/mes</span>
+                        </div>
+                        <p>Para edificios y empresas</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> 10+ sensores</li>
+                        <li><i class="fas fa-check"></i> Dashboard personalizado</li>
+                        <li><i class="fas fa-check"></i> API para integración</li>
+                        <li><i class="fas fa-check"></i> Informes ejecutivos</li>
+                        <li><i class="fas fa-check"></i> Detección predictiva</li>
+                        <li><i class="fas fa-check"></i> Cuenta dedicada</li>
+                    </ul>
+                    <a href="#contacto" class="btn-plan">Contactar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="testimonios">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Lo que dicen nuestros clientes</h2>
+                <p>+500 hogares ya confían en VolTrix</p>
+            </div>
+            <div class="testimonios-grid">
+                <div class="testimonio-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Mi factura bajó un 45% en solo dos meses. La detección de fallas me alertó de un problema en el cableado que no sabía que tenía."</p>
+                    <div class="testimonio-author">
+                        <strong>María González</strong>
+                        <span>Bogotá, Colombia</span>
+                    </div>
+                </div>
+                <div class="testimonio-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Instalé VolTrix en mi negocio y ya recuperé la inversión. Las alertas en tiempo real me ayudan a controlar los costos operativos."</p>
+                    <div class="testimonio-author">
+                        <strong>Carlos Rodríguez</strong>
+                        <span>Medellín, Colombia</span>
+                    </div>
+                </div>
+                <div class="testimonio-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"La mejor inversión que hice para mi hogar. El dashboard es súper intuitivo y las recomendaciones son muy útiles."</p>
+                    <div class="testimonio-author">
+                        <strong>Ana Lucía Martínez</strong>
+                        <span>Cali, Colombia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Casos de Éxito -->
+    <section class="casos-exito">
+        <div class="container">
+            <div class="caso-card" data-aos="fade-up">
+                <div class="caso-content">
+                    <h3>🏆 Caso de Éxito: Conjunto Residencial Los Pinos</h3>
+                    <p>50 apartamentos equipados con VolTrix lograron una reducción del 38% en el consumo común del edificio.</p>
+                    <div class="caso-stats">
+                        <div><strong>Ahorro mensual:</strong> $850,000 COP</div>
+                        <div><strong>ROI:</strong> 3 meses</div>
+                        <div><strong>Fallas detectadas:</strong> 12</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Preguntas Frecuentes</h2>
+                <p>Resolvemos tus dudas</p>
+            </div>
+            <div class="faq-grid" data-aos="fade-up">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-chevron-right"></i>
+                        <span>¿Es difícil de instalar?</span>
+                    </div>
+                    <div class="faq-answer">No. La instalación toma menos de 10 minutos y no requiere herramientas especializadas. Incluye guía paso a paso y soporte por video llamada.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-chevron-right"></i>
+                        <span>¿Funciona sin internet?</span>
+                    </div>
+                    <div class="faq-answer">El sensor almacena datos localmente y los sincroniza cuando se restablece la conexión. El dashboard requiere internet para consultas en tiempo real.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-chevron-right"></i>
+                        <span>¿Qué pasa si detecta una falla?</span>
+                    </div>
+                    <div class="faq-answer">Recibirás una notificación inmediata por SMS, email y en el dashboard con la ubicación aproximada de la falla y recomendaciones de acción.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-chevron-right"></i>
+                        <span>¿Puedo cancelar cuando quiera?</span>
+                    </div>
+                    <div class="faq-answer">Sí. Sin cláusulas de permanencia. Puedes cancelar tu suscripción en cualquier momento desde el panel de control.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo (Confianza) -->
     <section id="equipo" class="equipo">
         <div class="container">
-            <div class="section-header">
-                <h2>Nuestro Equipo</h2>
-                <p>Los creadores de VolTrix</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2>El Equipo Detrás de VolTrix</h2>
+                <p>Innovación y compromiso social</p>
             </div>
             <div class="equipo-grid">
-                <div class="miembro-card">
+                <div class="miembro-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="miembro-icon"><i class="fas fa-user-graduate"></i></div>
                     <h3>Michael Salcedo Diaz</h3>
                     <p>Ingeniería de Sistemas</p>
+                    <p class="miembro-rol">CEO & Lead Developer</p>
                 </div>
-                <div class="miembro-card">
+                <div class="miembro-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="miembro-icon"><i class="fas fa-user-graduate"></i></div>
-                    <h3>Roberto Carlos Arbelaez Galvan</h3>
+                    <h3>Roberto Carlos Arbelaez</h3>
                     <p>Ingeniería de Sistemas</p>
+                    <p class="miembro-rol">IoT & Hardware Lead</p>
                 </div>
-                <div class="miembro-card">
+                <div class="miembro-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="miembro-icon"><i class="fas fa-user-graduate"></i></div>
                     <h3>Eduardo Jimenez</h3>
                     <p>Ingeniería de Sistemas</p>
+                    <p class="miembro-rol">UX/UI Designer</p>
                 </div>
-                <div class="miembro-card">
+                <div class="miembro-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="miembro-icon"><i class="fas fa-user-graduate"></i></div>
                     <h3>Luis Felipe Gracia</h3>
                     <p>Ingeniería de Sistemas</p>
+                    <p class="miembro-rol">Backend Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto / CTA Final -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <div class="contacto-content" data-aos="fade-up">
+                <div class="contacto-text">
+                    <h2>¿Listo para empezar a ahorrar?</h2>
+                    <p>Únete a más de 500 hogares que ya están reduciendo su factura eléctrica con VolTrix.</p>
+                    <div class="contacto-benefits">
+                        <div><i class="fas fa-check-circle"></i> Envío gratis a toda Colombia</div>
+                        <div><i class="fas fa-check-circle"></i> Instalación sencilla</div>
+                        <div><i class="fas fa-check-circle"></i> Garantía de satisfacción 30 días</div>
+                    </div>
+                </div>
+                <div class="contacto-form">
+                    <form id="form-contacto">
+                        <input type="text" placeholder="Nombre completo" required>
+                        <input type="email" placeholder="Correo electrónico" required>
+                        <input type="tel" placeholder="Teléfono">
+                        <select>
+                            <option value="">Selecciona un plan</option>
+                            <option>Básico - $19.99/mes</option>
+                            <option>Pro - $39.99/mes</option>
+                            <option>Empresarial - $99.99/mes</option>
+                        </select>
+                        <textarea placeholder="¿Tienes alguna pregunta?"></textarea>
+                        <button type="submit" class="btn btn-primary btn-block">Solicitar información <i class="fas fa-arrow-right"></i></button>
+                    </form>
+                    <p class="form-note">* No compartimos tus datos. Te contactaremos en menos de 24 horas.</p>
                 </div>
             </div>
         </div>
@@ -263,28 +484,36 @@
                     <i class="fas fa-bolt"></i>
                     <span>VolTrix</span>
                     <p>Sistema inteligente para el monitoreo energético</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
                 <div class="footer-links">
-                    <h4>Enlaces</h4>
+                    <h4>Producto</h4>
                     <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#problema">Problema</a></li>
-                        <li><a href="#solucion">Solución</a></li>
-                        <li><a href="#objetivos">Objetivos</a></li>
+                        <li><a href="#como-funciona">Cómo funciona</a></li>
+                        <li><a href="#precios">Planes</a></li>
+                        <li><a href="#demo">Demo</a></li>
+                        <li><a href="#">Soporte</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>Recursos</h4>
+                    <h4>Compañía</h4>
                     <ul>
-                        <li><a href="https://github.com/tuusuario/VolTrix" target="_blank">GitHub</a></li>
-                        <li><a href="https://voltrix.ct.ws" target="_blank">Sitio Web</a></li>
-                        <li><a href="#">Documentación</a></li>
+                        <li><a href="#equipo">Nosotros</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Prensa</a></li>
+                        <li><a href="#">Trabaja con nosotros</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <h4>Contacto</h4>
-                    <p><i class="fas fa-envelope"></i> info@voltrix.com</p>
-                    <p><i class="fab fa-github"></i> github.com/tuusuario/VolTrix</p>
+                    <p><i class="fas fa-envelope"></i> hola@voltrix.com</p>
+                    <p><i class="fas fa-phone"></i> +57 300 123 4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -295,6 +524,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
