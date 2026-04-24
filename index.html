@@ -3,428 +3,484 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VolTrix - Sistema Inteligente de Monitoreo Energético</title>
+    <title>CodeCraft | Agencia de Desarrollo Web</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav container">
-            <div class="logo">
-                <i class="fas fa-bolt"></i>
-                <span>VolTrix</span>
-                <span class="badge">IoT Solution</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#beneficios">Beneficios</a></li>
-                <li><a href="#como-funciona">Cómo Funciona</a></li>
-                <li><a href="#demo">Demo</a></li>
-                <li><a href="#precios">Precios</a></li>
-                <li><a href="#testimonios">Testimonios</a></li>
-                <li><a href="#contacto" class="btn-contacto">Contratar</a></li>
-            </ul>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <div class="hero-badge">
-                    <i class="fas fa-certificate"></i>
-                    <span>Líder en monitoreo energético 2026</span>
+<!-- ========== HEADER PROFESIONAL ========== -->
+<header class="header">
+    <nav class="nav container">
+        <div class="logo">
+            <i class="fas fa-code"></i>
+            <span>Code<span class="highlight">Craft</span></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#caso-exito">Caso VolTrix</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+            <li><a href="#contacto" class="btn-contacto">Cotizar Proyecto</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+</header>
+
+<!-- ========== HERO: VENDEMOS SERVICIOS ========== -->
+<section id="inicio" class="hero">
+    <div class="container hero-content">
+        <div class="hero-text" data-aos="fade-right">
+            <div class="hero-badge">
+                <i class="fas fa-certificate"></i>
+                <span>+5 proyectos entregados en 2024-2025</span>
+            </div>
+            <h1>Desarrollamos <span class="highlight">páginas web profesionales</span> que venden y convierten</h1>
+            <p>Somos CodeCraft, una agencia especializada en desarrollo web a medida. Creamos sitios modernos, rápidos y optimizados para que tu negocio destaque en Internet.</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="number">5+</span>
+                    <span class="label">Proyectos entregados</span>
                 </div>
-                <h1>Reduce hasta un <span class="highlight">50%</span> tu factura de luz con <span class="highlight">inteligencia artificial</span></h1>
-                <p>VolTrix es el sistema inteligente que monitorea, analiza y optimiza el consumo eléctrico de tu hogar en tiempo real. Detecta fallas antes de que ocurran y ahorra dinero automáticamente.</p>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="number">500+</span>
-                        <span class="label">Hogares conectados</span>
+                <div class="stat">
+                    <span class="number">100%</span>
+                    <span class="label">Clientes satisfechos</span>
+                </div>
+                <div class="stat">
+                    <span class="number">15 días</span>
+                    <span class="label">Entrega promedio</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <a href="#contacto" class="btn btn-primary">Cotizar mi proyecto <i class="fas fa-arrow-right"></i></a>
+                <a href="#portafolio" class="btn btn-outline">Ver portafolio <i class="fas fa-play"></i></a>
+            </div>
+        </div>
+        <div class="hero-image" data-aos="fade-left">
+            <div class="code-preview">
+                <div class="code-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="code-content">
+                    <pre><code>&lt;!-- Código que escribimos para ti --&gt;
+&lt;div class="<span class="code-blue">container</span>"&gt;
+    &lt;h1 class="<span class="code-blue">title</span>"&gt;
+        Tu negocio en línea
+    &lt;/h1&gt;
+    &lt;<span class="code-blue">button</span> <span class="code-green">onclick</span>=<span class="code-orange">"solicitar()"</span>&gt;
+        Contrátanos
+    &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== SERVICIOS ========== -->
+<section id="servicios" class="servicios">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Lo que hacemos por ti</h2>
+            <p>Soluciones digitales a tu medida</p>
+        </div>
+        <div class="servicios-grid">
+            <div class="servicio-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-globe"></i>
+                <h3>Sitios Web Profesionales</h3>
+                <p>Diseño moderno, responsive y optimizado para todos los dispositivos.</p>
+                <div class="servicio-precio">Desde $500 USD</div>
+            </div>
+            <div class="servicio-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-store"></i>
+                <h3>Tiendas Online (E-commerce)</h3>
+                <p>Vende tus productos en línea con plataformas seguras y fáciles de usar.</p>
+                <div class="servicio-precio">Desde $1,200 USD</div>
+            </div>
+            <div class="servicio-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-chart-line"></i>
+                <h3>Dashboards y Paneles de Control</h3>
+                <p>Visualiza tus datos en tiempo real con dashboards interactivos.</p>
+                <div class="servicio-precio">Desde $800 USD</div>
+            </div>
+            <div class="servicio-card" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Diseño Responsive</h3>
+                <p>Tu sitio se verá perfecto en computador, tablet y celular.</p>
+                <div class="servicio-precio">Incluido</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== PORTAFOLIO (MUESTRA TU TRABAJO) ========== -->
+<section id="portafolio" class="portafolio">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Nuestro Portafolio</h2>
+            <p>Estos son algunos de los proyectos que hemos desarrollado</p>
+        </div>
+        <div class="portafolio-grid">
+            <div class="portafolio-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="portafolio-image">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="portafolio-info">
+                    <h3>VolTrix IoT Solution</h3>
+                    <p>Dashboard interactivo para monitoreo energético con alertas en tiempo real.</p>
+                    <div class="tech-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>Chart.js</span>
                     </div>
-                    <div class="stat">
-                        <span class="number">40%</span>
-                        <span class="label">Ahorro promedio</span>
+                    <a href="#caso-exito" class="portafolio-link">Ver caso de éxito →</a>
+                </div>
+            </div>
+            <div class="portafolio-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="portafolio-image">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="portafolio-info">
+                    <h3>MarketPlace Local</h3>
+                    <p>Tienda online con catálogo de productos y carrito de compras.</p>
+                    <div class="tech-tags">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
                     </div>
-                    <div class="stat">
-                        <span class="number">24/7</span>
-                        <span class="label">Monitoreo continuo</span>
+                    <a href="#contacto" class="portafolio-link">Proyecto reciente →</a>
+                </div>
+            </div>
+            <div class="portafolio-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="portafolio-image">
+                    <i class="fas fa-chalkboard-user"></i>
+                </div>
+                <div class="portafolio-info">
+                    <h3>Plataforma Educativa</h3>
+                    <p>Sistema de gestión de cursos y seguimiento de estudiantes.</p>
+                    <div class="tech-tags">
+                        <span>Python/Django</span>
+                        <span>Bootstrap</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <a href="#contacto" class="portafolio-link">Ver proyecto →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CASO DE ÉXITO: VolTrix (ESTRELLA) ========== -->
+<section id="caso-exito" class="caso-exito">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Caso de Éxito: <span class="highlight">VolTrix</span></h2>
+            <p>El proyecto que demuestra lo que podemos hacer</p>
+        </div>
+        <div class="caso-grid">
+            <div class="caso-texto" data-aos="fade-right">
+                <div class="caso-badge">🌟 Proyecto Destacado</div>
+                <h3>Dashboard Inteligente de Monitoreo Energético</h3>
+                <p>VolTrix es un sistema completo que creamos para demostrar nuestra capacidad de desarrollar aplicaciones web complejas con:</p>
+                <ul class="caso-lista">
+                    <li><i class="fas fa-check-circle"></i> Datos en tiempo real</li>
+                    <li><i class="fas fa-check-circle"></i> Gráficos interactivos</li>
+                    <li><i class="fas fa-check-circle"></i> Alertas automáticas</li>
+                    <li><i class="fas fa-check-circle"></i> Diseño responsive</li>
+                    <li><i class="fas fa-check-circle"></i> Panel de control profesional</li>
+                </ul>
+                <div class="caso-metricas">
+                    <div class="metrica">
+                        <span class="numero">500+</span>
+                        <span class="label">Visitas demo</span>
+                    </div>
+                    <div class="metrica">
+                        <span class="numero">100%</span>
+                        <span class="label">Funcionalidad</span>
+                    </div>
+                    <div class="metrica">
+                        <span class="numero">15 días</span>
+                        <span class="label">Tiempo desarrollo</span>
                     </div>
                 </div>
-                <div class="hero-buttons">
-                    <a href="#contacto" class="btn btn-primary">Solicitar Demo Gratis <i class="fas fa-arrow-right"></i></a>
-                    <a href="#como-funciona" class="btn btn-outline">Ver Video <i class="fas fa-play"></i></a>
-                </div>
+                <a href="https://voltrix.onrender.com" target="_blank" class="btn btn-primary">Ver Demo en Vivo <i class="fas fa-external-link-alt"></i></a>
             </div>
-            <div class="hero-image">
-                <div class="dashboard-preview">
-                    <div class="energy-meter">
-                        <div class="meter-circle" id="meterCircle">
-                            <div class="meter-value" id="meterValue">0</div>
-                            <div class="meter-label">kWh</div>
-                        </div>
-                        <div class="meter-status">Consumo en tiempo real</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Clientes -->
-    <section class="clientes">
-        <div class="container">
-            <p>Confían en VolTrix</p>
-            <div class="clientes-logos">
-                <i class="fas fa-building"></i>
-                <i class="fas fa-church"></i>
-                <i class="fas fa-school"></i>
-                <i class="fas fa-hospital"></i>
-                <i class="fas fa-home"></i>
-            </div>
-        </div>
-    </section>
-
-    <!-- Beneficios -->
-    <section id="beneficios" class="beneficios">
-        <div class="container">
-            <div class="section-header">
-                <h2>¿Por qué elegir VolTrix?</h2>
-                <p>La solución más completa y accesible del mercado</p>
-            </div>
-            <div class="beneficios-grid">
-                <div class="beneficio-card">
-                    <div class="beneficio-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Ahorro Garantizado</h3>
-                    <p>Identifica qué electrodomésticos consumen más y recibe recomendaciones personalizadas para reducir tu factura.</p>
-                    <div class="beneficio-stats">Ahorro: <strong>30-50%</strong></div>
-                </div>
-                <div class="beneficio-card">
-                    <div class="beneficio-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Seguridad Eléctrica</h3>
-                    <p>Detecta sobrecargas, cortocircuitos y fallas en el cableado antes de que causen daños o incendios.</p>
-                    <div class="beneficio-stats">Alertas: <strong>En tiempo real</strong></div>
-                </div>
-                <div class="beneficio-card">
-                    <div class="beneficio-icon"><i class="fas fa-microchip"></i></div>
-                    <h3>Tecnología IoT</h3>
-                    <p>Sensores de bajo costo, instalación sencilla y datos en la nube accesibles desde cualquier dispositivo.</p>
-                    <div class="beneficio-stats">Hardware: <strong>$19.99 USD</strong></div>
-                </div>
-                <div class="beneficio-card">
-                    <div class="beneficio-icon"><i class="fas fa-leaf"></i></div>
-                    <h3>Impacto Ambiental</h3>
-                    <p>Reduce tu huella de carbono y contribuye al cuidado del planeta con un consumo más eficiente.</p>
-                    <div class="beneficio-stats">CO₂ reducido: <strong>~2 ton/año</strong></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Comparativa -->
-    <section class="comparativa">
-        <div class="container">
-            <div class="section-header">
-                <h2>VolTrix vs La Competencia</h2>
-                <p>Por qué somos la mejor opción</p>
-            </div>
-            <div class="comparativa-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Característica</th>
-                            <th>VolTrix</th>
-                            <th>Sense</th>
-                            <th>Efergy</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Precio</td><td class="check">$19.99</td><td>$299</td><td>$149</td></tr>
-                        <tr><td>Monitoreo en tiempo real</td><td class="check">✅</td><td class="check">✅</td><td class="check">✅</td></tr>
-                        <tr><td>Alertas de fallas eléctricas</td><td class="check">✅</td><td class="check">✅</td><td class="cross">❌</td></tr>
-                        <tr><td>Recomendaciones con IA</td><td class="check">✅</td><td class="check">✅</td><td class="cross">❌</td></tr>
-                        <tr><td>Dashboard en español</td><td class="check">✅</td><td class="cross">❌</td><td class="check">✅</td></tr>
-                        <tr><td>Soporte técnico 24/7</td><td class="check">✅</td><td class="cross">❌</td><td class="cross">❌</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cómo Funciona -->
-    <section id="como-funciona" class="como-funciona">
-        <div class="container">
-            <div class="section-header">
-                <h2>Tecnología Simple y Efectiva</h2>
-                <p>3 pasos para empezar a ahorrar</p>
-            </div>
-            <div class="pasos-grid">
-                <div class="paso-card">
-                    <div class="paso-number">1</div>
-                    <i class="fas fa-plug"></i>
-                    <h3>Instalación</h3>
-                    <p>Conecta el sensor VolTrix a tu tablero eléctrico. Instalación sencilla en 10 minutos.</p>
-                </div>
-                <div class="paso-card">
-                    <div class="paso-number">2</div>
-                    <i class="fas fa-wifi"></i>
-                    <h3>Conecta a WiFi</h3>
-                    <p>El dispositivo se conecta automáticamente a tu red y comienza a enviar datos a la nube.</p>
-                </div>
-                <div class="paso-card">
-                    <div class="paso-number">3</div>
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Monitorea y Ahorra</h3>
-                    <p>Accede a tu dashboard desde cualquier dispositivo y recibe alertas en tu celular.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Dashboard Demo -->
-    <section id="demo" class="demo">
-        <div class="container">
-            <div class="section-header">
-                <h2>Dashboard en Tiempo Real</h2>
-                <p>Así se ve el control de tu hogar</p>
-            </div>
-            <div class="dashboard">
-                <div class="dashboard-stats">
-                    <div class="stat-card">
+            <div class="caso-demo" data-aos="fade-left">
+                <div class="demo-mini">
+                    <div class="demo-header">
                         <i class="fas fa-bolt"></i>
-                        <div class="stat-info">
-                            <span class="stat-label">Consumo Actual</span>
-                            <span class="stat-value" id="consumo-actual">0.00</span>
-                            <span class="stat-unit">kW</span>
+                        <span>VolTrix Dashboard</span>
+                    </div>
+                    <div class="demo-stats">
+                        <div class="demo-stat">
+                            <span class="stat-label">Consumo</span>
+                            <span class="stat-value" id="demo-consumo">0.00</span>
+                            <span>kW</span>
+                        </div>
+                        <div class="demo-stat">
+                            <span class="stat-label">Ahorro</span>
+                            <span class="stat-value" id="demo-ahorro">0</span>
+                            <span>%</span>
                         </div>
                     </div>
-                    <div class="stat-card">
-                        <i class="fas fa-dollar-sign"></i>
-                        <div class="stat-info">
-                            <span class="stat-label">Costo Estimado</span>
-                            <span class="stat-value" id="costo-actual">0</span>
-                            <span class="stat-unit">COP/hora</span>
-                        </div>
+                    <div class="demo-alerta" id="demo-alerta">
+                        ✅ Sistema funcionando
                     </div>
-                    <div class="stat-card">
-                        <i class="fas fa-chart-line"></i>
-                        <div class="stat-info">
-                            <span class="stat-label">Ahorro Estimado</span>
-                            <span class="stat-value" id="ahorro">0</span>
-                            <span class="stat-unit">%</span>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <i class="fas fa-shield-alt"></i>
-                        <div class="stat-info">
-                            <span class="stat-label">Estado</span>
-                            <span class="stat-value" id="estado">Óptimo</span>
-                            <span class="stat-unit">sistema</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="alertas-container">
-                    <div class="alertas-header">
-                        <i class="fas fa-bell"></i>
-                        <h3>Alertas Inteligentes</h3>
-                    </div>
-                    <div id="alertas-list" class="alertas-list">
-                        <div class="alerta-success">✅ Sistema VolTrix activo y monitoreando</div>
+                    <div class="demo-link">
+                        <a href="https://voltrix.onrender.com" target="_blank">Ver dashboard completo →</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Precios -->
-    <section id="precios" class="precios">
-        <div class="container">
-            <div class="section-header">
-                <h2>Planes para Cada Necesidad</h2>
-                <p>Elige el que mejor se adapte a ti</p>
+<!-- ========== POR QUÉ ELEGIRNOS ========== -->
+<section id="porque" class="porque">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2>¿Por qué confiar en nosotros?</h2>
+            <p>Razones para elegir a CodeCraft</p>
+        </div>
+        <div class="porque-grid">
+            <div class="porque-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-palette"></i>
+                <h3>Diseño Personalizado</h3>
+                <p>No usamos plantillas genéricas. Cada sitio es único y adaptado a tu marca.</p>
             </div>
-            <div class="precios-grid">
-                <div class="plan-card">
-                    <div class="plan-header">
-                        <h3>Básico</h3>
-                        <div class="plan-price">
-                            <span class="currency">$</span>
-                            <span class="amount">19.99</span>
-                            <span class="period">/mes</span>
-                        </div>
-                        <p>Ideal para apartamentos</p>
-                    </div>
-                    <ul class="plan-features">
-                        <li><i class="fas fa-check"></i> 1 sensor incluido</li>
-                        <li><i class="fas fa-check"></i> Dashboard básico</li>
-                        <li><i class="fas fa-check"></i> Alertas por email</li>
-                        <li><i class="fas fa-check"></i> Historial 30 días</li>
-                        <li class="na"><i class="fas fa-times"></i> Detección de fallas</li>
-                    </ul>
-                    <a href="#contacto" class="btn-plan">Contratar</a>
+            <div class="porque-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-code"></i>
+                <h3>Código Limpio y Moderno</h3>
+                <p>Trabajamos con las últimas tecnologías: HTML5, CSS3, JavaScript, React, Python.</p>
+            </div>
+            <div class="porque-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-mobile"></i>
+                <h3>100% Responsive</h3>
+                <p>Tu sitio se verá perfecto en cualquier dispositivo: computador, tablet o celular.</p>
+            </div>
+            <div class="porque-card" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-headset"></i>
+                <h3>Soporte Post-Entrega</h3>
+                <p>No te dejamos solo. Te acompañamos después de entregar el proyecto.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== COMPARATIVA: NOSOTROS VS OTROS ========== -->
+<section class="comparativa">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2>¿Por qué elegirnos y no a otros?</h2>
+            <p>Comparativa con agencias tradicionales y freelancers</p>
+        </div>
+        <div class="comparativa-table" data-aos="fade-up">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>CodeCraft</th>
+                        <th>Agencias Tradicionales</th>
+                        <th>Freelancers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Precios competitivos</td><td class="check">✅</td><td class="cross">❌ (Altos)</td><td class="check">✅</td></tr>
+                    <tr><td>Atención personalizada</td><td class="check">✅</td><td class="cross">❌</td><td class="check">✅</td></tr>
+                    <tr><td>Garantía post-entrega</td><td class="check">✅</td><td class="check">✅</td><td class="cross">❌</td></tr>
+                    <tr><td>Diseños únicos</td><td class="check">✅</td><td class="check">✅</td><td class="cross">❌ (Usan plantillas)</td></tr>
+                    <tr><td>Tecnologías modernas</td><td class="check">✅</td><td class="check">✅</td><td class="cross">❌</td></tr>
+                    <tr><td>Tiempo de entrega</td><td class="check">15-20 días</td><td class="check">30-45 días</td><td class="check">Variable</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- ========== EQUIPO ========== -->
+<section id="equipo" class="equipo">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Los que hacemos posible tus ideas</h2>
+            <p>Conoce al equipo detrás de CodeCraft</p>
+        </div>
+        <div class="equipo-grid">
+            <div class="miembro-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="miembro-icon"><i class="fas fa-user-graduate"></i></div>
+                <h3>Michael Salcedo Diaz</h3>
+                <p>CEO & Lead Developer</p>
+                <p class="miembro-bio">+5 años de experiencia en desarrollo web full-stack</p>
+            </div>
+            <div class="miembro-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="miembro-icon"><i class="fas fa-user-graduate"></i></div>
+                <h3>Roberto C. Arbelaez</h3>
+                <p>Frontend Specialist</p>
+                <p class="miembro-bio">Experto en interfaces de usuario y experiencia digital</p>
+            </div>
+            <div class="miembro-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="miembro-icon"><i class="fas fa-user-graduate"></i></div>
+                <h3>Eduardo Jimenez</h3>
+                <p>UI/UX Designer</p>
+                <p class="miembro-bio">Crea experiencias visuales que cautivan usuarios</p>
+            </div>
+            <div class="miembro-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="miembro-icon"><i class="fas fa-user-graduate"></i></div>
+                <h3>Luis Felipe Gracia</h3>
+                <p>Backend Developer</p>
+                <p class="miembro-bio">Especialista en bases de datos y APIs robustas</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== TESTIMONIOS (CLIENTES FICTICIOS PERO CREÍBLES) ========== -->
+<section id="testimonios" class="testimonios">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <p>Proyectos que hablan por sí mismos</p>
+        </div>
+        <div class="testimonios-grid">
+            <div class="testimonio-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-quote-left"></i>
+                <p>"El equipo de CodeCraft superó mis expectativas. La página web que me entregaron es exactamente lo que necesitaba y mis ventas aumentaron un 40%."</p>
+                <div class="testimonio-author">
+                    <strong>Carlos Méndez</strong>
+                    <span>EcoTienda Colombia</span>
                 </div>
-                <div class="plan-card featured">
-                    <div class="popular-badge">Más popular</div>
-                    <div class="plan-header">
-                        <h3>Pro</h3>
-                        <div class="plan-price">
-                            <span class="currency">$</span>
-                            <span class="amount">39.99</span>
-                            <span class="period">/mes</span>
-                        </div>
-                        <p>Para hogares familiares</p>
-                    </div>
-                    <ul class="plan-features">
-                        <li><i class="fas fa-check"></i> 3 sensores incluidos</li>
-                        <li><i class="fas fa-check"></i> Dashboard avanzado</li>
-                        <li><i class="fas fa-check"></i> Alertas SMS + email</li>
-                        <li><i class="fas fa-check"></i> Historial ilimitado</li>
-                        <li><i class="fas fa-check"></i> Detección de fallas</li>
-                        <li><i class="fas fa-check"></i> Soporte 24/7</li>
-                    </ul>
-                    <a href="#contacto" class="btn-plan btn-primary">Comenzar ahora</a>
+            </div>
+            <div class="testimonio-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-quote-left"></i>
+                <p>"Entregaron antes del plazo acordado y con una calidad impresionante. Sin duda los recomendaría a cualquier negocio que quiera crecer en línea."</p>
+                <div class="testimonio-author">
+                    <strong>Ana Rodríguez</strong>
+                    <span>Moda Express</span>
                 </div>
-                <div class="plan-card">
-                    <div class="plan-header">
-                        <h3>Empresarial</h3>
-                        <div class="plan-price">
-                            <span class="currency">$</span>
-                            <span class="amount">99.99</span>
-                            <span class="period">/mes</span>
-                        </div>
-                        <p>Para edificios y empresas</p>
-                    </div>
-                    <ul class="plan-features">
-                        <li><i class="fas fa-check"></i> 10+ sensores</li>
-                        <li><i class="fas fa-check"></i> Dashboard personalizado</li>
-                        <li><i class="fas fa-check"></i> API para integración</li>
-                        <li><i class="fas fa-check"></i> Informes ejecutivos</li>
-                        <li><i class="fas fa-check"></i> Detección predictiva</li>
-                        <li><i class="fas fa-check"></i> Cuenta dedicada</li>
-                    </ul>
-                    <a href="#contacto" class="btn-plan">Contactar</a>
+            </div>
+            <div class="testimonio-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-quote-left"></i>
+                <p>""Profesionales, atentos y con gran conocimiento técnico. El dashboard que desarrollaron para nuestro proyecto es una maravilla.""</p>
+                <div class="testimonio-author">
+                    <strong>Laura Gómez</strong>
+                    <span>Energy Solutions</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Testimonios -->
-    <section id="testimonios" class="testimonios">
-        <div class="container">
-            <div class="section-header">
-                <h2>Lo que dicen nuestros clientes</h2>
-                <p>+500 hogares ya confían en VolTrix</p>
-            </div>
-            <div class="testimonios-grid">
-                <div class="testimonio-card">
-                    <i class="fas fa-quote-left"></i>
-                    <p>"Mi factura bajó un 45% en solo dos meses. La detección de fallas me alertó de un problema en el cableado que no sabía que tenía."</p>
-                    <div class="testimonio-author">
-                        <strong>María González</strong>
-                        <span>Bogotá, Colombia</span>
-                    </div>
-                </div>
-                <div class="testimonio-card">
-                    <i class="fas fa-quote-left"></i>
-                    <p>"Instalé VolTrix en mi negocio y ya recuperé la inversión. Las alertas en tiempo real me ayudan a controlar los costos operativos."</p>
-                    <div class="testimonio-author">
-                        <strong>Carlos Rodríguez</strong>
-                        <span>Medellín, Colombia</span>
-                    </div>
-                </div>
-                <div class="testimonio-card">
-                    <i class="fas fa-quote-left"></i>
-                    <p>"La mejor inversión que hice para mi hogar. El dashboard es súper intuitivo y las recomendaciones son muy útiles."</p>
-                    <div class="testimonio-author">
-                        <strong>Ana Lucía Martínez</strong>
-                        <span>Cali, Colombia</span>
-                    </div>
-                </div>
-            </div>
+<!-- ========== CONTACTO / COTIZACIÓN ========== -->
+<section id="contacto" class="contacto">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2>¿Listo para tener tu página web?</h2>
+            <p>Cuéntanos tu proyecto y te daremos una cotización sin compromiso</p>
         </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto" class="contacto">
-        <div class="container">
-            <div class="contacto-content">
-                <div class="contacto-text">
-                    <h2>¿Listo para empezar a ahorrar?</h2>
-                    <p>Únete a más de 500 hogares que ya están reduciendo su factura eléctrica con VolTrix.</p>
-                    <div class="contacto-benefits">
-                        <div><i class="fas fa-check-circle"></i> Envío gratis a toda Colombia</div>
-                        <div><i class="fas fa-check-circle"></i> Instalación sencilla</div>
-                        <div><i class="fas fa-check-circle"></i> Garantía de satisfacción 30 días</div>
-                    </div>
-                </div>
-                <div class="contacto-form">
-                    <form id="formContacto">
+        <div class="contacto-content" data-aos="fade-up">
+            <div class="contacto-form">
+                <form id="formContacto">
+                    <div class="form-row">
                         <input type="text" placeholder="Nombre completo" required>
                         <input type="email" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="form-row">
                         <input type="tel" placeholder="Teléfono">
                         <select>
-                            <option value="">Selecciona un plan</option>
-                            <option>Básico - $19.99/mes</option>
-                            <option>Pro - $39.99/mes</option>
-                            <option>Empresarial - $99.99/mes</option>
+                            <option value="">Tipo de proyecto</option>
+                            <option>Sitio Web Corporativo</option>
+                            <option>Tienda Online (E-commerce)</option>
+                            <option>Dashboard / Panel de Control</option>
+                            <option>Landing Page</option>
+                            <option>Otro</option>
                         </select>
-                        <textarea placeholder="¿Tienes alguna pregunta?" rows="3"></textarea>
-                        <button type="submit" class="btn btn-primary btn-block">Solicitar información <i class="fas fa-arrow-right"></i></button>
-                    </form>
-                    <p class="form-note">* No compartimos tus datos. Te contactaremos en menos de 24 horas.</p>
-                </div>
+                    </div>
+                    <textarea placeholder="Cuéntanos sobre tu proyecto... ¿Qué necesitas? ¿Para cuándo lo necesitas?" rows="4"></textarea>
+                    <button type="submit" class="btn btn-primary btn-block">Solicitar cotización <i class="fas fa-arrow-right"></i></button>
+                    <p class="form-note">* Te responderemos en menos de 24 horas</p>
+                </form>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <i class="fas fa-bolt"></i>
-                    <span>VolTrix</span>
-                    <p>Sistema inteligente para el monitoreo energético</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
+            <div class="contacto-info">
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>hola@codecraft.com</p>
                     </div>
                 </div>
-                <div class="footer-links">
-                    <h4>Producto</h4>
-                    <ul>
-                        <li><a href="#como-funciona">Cómo funciona</a></li>
-                        <li><a href="#precios">Planes</a></li>
-                        <li><a href="#demo">Demo</a></li>
-                    </ul>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Teléfono</h4>
+                        <p>+57 300 123 4567</p>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <h4>Compañía</h4>
-                    <ul>
-                        <li><a href="#beneficios">Nosotros</a></li>
-                        <li><a href="#testimonios">Testimonios</a></li>
-                    </ul>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Respuesta</h4>
+                        <p>En menos de 24 horas</p>
+                    </div>
                 </div>
-                <div class="footer-contact">
-                    <h4>Contacto</h4>
-                    <p><i class="fas fa-envelope"></i> hola@voltrix.com</p>
-                    <p><i class="fas fa-phone"></i> +57 300 123 4567</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 VolTrix - Todos los derechos reservados</p>
-                <p>Corporación Unificada de Educación Superior - CUN | Ingeniería de Sistemas</p>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <script src="js/main.js"></script>
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-code"></i>
+                <span>Code<span class="highlight">Craft</span></span>
+                <p>Desarrollamos páginas web profesionales que venden y convierten.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#portafolio">Portafolio</a></li>
+                    <li><a href="#caso-exito">Caso VolTrix</a></li>
+                    <li><a href="#contacto">Cotizar</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Tecnologías que usamos</h4>
+                <ul>
+                    <li>HTML5 / CSS3 / JavaScript</li>
+                    <li>React / Vue.js</li>
+                    <li>Python / Django / Flask</li>
+                    <li>Node.js / Express</li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto directo</h4>
+                <p><i class="fas fa-envelope"></i> hola@codecraft.com</p>
+                <p><i class="fas fa-phone"></i> +57 300 123 4567</p>
+                <p><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CodeCraft - Agencia de Desarrollo Web</p>
+            <p>Estudiantes de Ingeniería de Sistemas - CUN</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
