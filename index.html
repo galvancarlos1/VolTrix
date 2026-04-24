@@ -4,79 +4,828 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeCraft | Agencia de Desarrollo Web</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #090a0f;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ========== HEADER ========== */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(9, 10, 15, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            z-index: 1000;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #a1a1aa;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #8b5cf6;
+        }
+
+        .btn-cotizar {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white !important;
+            padding: 10px 24px;
+            border-radius: 40px;
+        }
+
+        /* ========== BOTONES ========== */
+        .btn-primary {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            border: none;
+            padding: 14px 32px;
+            border-radius: 40px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #3f3f46;
+            padding: 14px 32px;
+            border-radius: 40px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            border-color: #8b5cf6;
+            background: rgba(139, 92, 246, 0.1);
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            padding: 160px 0 100px;
+            background: radial-gradient(circle at 20% 50%, rgba(99,102,241,0.15), transparent 50%);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(139, 92, 246, 0.15);
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 14px;
+            color: #8b5cf6;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 54px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #71717a;
+            margin-bottom: 32px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+            margin-bottom: 40px;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 800;
+            color: white;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #71717a;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+        }
+
+        /* ========== SECCIONES GENERALES ========== */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: #71717a;
+            font-size: 18px;
+        }
+
+        /* ========== SERVICIOS ========== */
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .servicio-card {
+            background: #12131a;
+            padding: 32px 24px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #1f1f28;
+            transition: all 0.3s;
+        }
+
+        .servicio-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+
+        .servicio-card i {
+            font-size: 48px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .servicio-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .servicio-card p {
+            color: #71717a;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .precio {
+            font-size: 24px;
+            font-weight: 700;
+            color: #8b5cf6;
+        }
+
+        .precio small {
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        /* ========== PORTAFOLIO ========== */
+        .portafolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .portafolio-card {
+            background: #12131a;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #1f1f28;
+            transition: all 0.3s;
+        }
+
+        .portafolio-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .portafolio-img {
+            height: 200px;
+            background: linear-gradient(135deg, #1a1b2e, #0f0f17);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .portafolio-img i {
+            font-size: 64px;
+            color: #8b5cf6;
+        }
+
+        .portafolio-info {
+            padding: 24px;
+        }
+
+        .portafolio-info h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .portafolio-info p {
+            color: #71717a;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tags span {
+            background: #1f1f28;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #a1a1aa;
+        }
+
+        .portafolio-link {
+            color: #8b5cf6;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        /* ========== CASO VOLTRIX ========== */
+        .caso-voltrix {
+            background: #0f0f17;
+        }
+
+        .caso-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .caso-badge {
+            display: inline-block;
+            background: rgba(139, 92, 246, 0.15);
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 14px;
+            color: #8b5cf6;
+            margin-bottom: 24px;
+        }
+
+        .caso-grid h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .caso-lista {
+            list-style: none;
+            margin: 24px 0;
+        }
+
+        .caso-lista li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .caso-lista i {
+            color: #10b981;
+        }
+
+        .caso-metricas {
+            display: flex;
+            gap: 40px;
+            margin: 32px 0;
+        }
+
+        .caso-metricas .numero {
+            font-size: 28px;
+            font-weight: 800;
+            color: #8b5cf6;
+            display: block;
+        }
+
+        .caso-metricas .label {
+            font-size: 12px;
+            color: #71717a;
+        }
+
+        /* Dashboard demo */
+        .demo-dashboard {
+            background: #090a0f;
+            border-radius: 24px;
+            padding: 24px;
+            border: 1px solid #1f1f28;
+        }
+
+        .demo-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #1f1f28;
+            margin-bottom: 20px;
+        }
+
+        .demo-header i {
+            font-size: 28px;
+            color: #f59e0b;
+        }
+
+        .demo-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .demo-stat {
+            background: #12131a;
+            padding: 16px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .demo-stat .label {
+            font-size: 12px;
+            color: #71717a;
+            display: block;
+        }
+
+        .demo-stat .value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #8b5cf6;
+        }
+
+        .demo-alerta {
+            background: rgba(16, 185, 129, 0.1);
+            padding: 14px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 14px;
+            border-left: 3px solid #10b981;
+        }
+
+        /* ========== POR QUÉ ELEGIRNOS ========== */
+        .porque-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .porque-card {
+            background: #12131a;
+            padding: 32px 24px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #1f1f28;
+        }
+
+        .porque-card i {
+            font-size: 40px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .porque-card h4 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .porque-card p {
+            color: #71717a;
+            font-size: 14px;
+        }
+
+        /* ========== COMPARATIVA ========== */
+        .comparativa-table {
+            background: #12131a;
+            border-radius: 20px;
+            padding: 20px;
+            overflow-x: auto;
+        }
+
+        .comparativa-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparativa-table th,
+        .comparativa-table td {
+            padding: 16px;
+            text-align: center;
+            border-bottom: 1px solid #1f1f28;
+        }
+
+        .comparativa-table th:first-child,
+        .comparativa-table td:first-child {
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .check {
+            color: #10b981;
+        }
+
+        .cross {
+            color: #ef4444;
+        }
+
+        /* ========== EQUIPO ========== */
+        .equipo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .miembro-card {
+            background: #12131a;
+            padding: 32px 24px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #1f1f28;
+        }
+
+        .miembro-card i {
+            font-size: 56px;
+            color: #8b5cf6;
+            margin-bottom: 16px;
+        }
+
+        .miembro-card h4 {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .miembro-card .rol {
+            font-size: 12px;
+            color: #8b5cf6;
+            margin-bottom: 12px;
+        }
+
+        .miembro-card .bio {
+            font-size: 12px;
+            color: #71717a;
+        }
+
+        /* ========== TESTIMONIOS ========== */
+        .testimonios-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testimonio-card {
+            background: #12131a;
+            padding: 32px;
+            border-radius: 20px;
+            border: 1px solid #1f1f28;
+        }
+
+        .testimonio-card i {
+            font-size: 32px;
+            color: #8b5cf6;
+            opacity: 0.5;
+            margin-bottom: 16px;
+        }
+
+        .testimonio-card p {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #a1a1aa;
+        }
+
+        .testimonio-card h5 {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .testimonio-card span {
+            font-size: 12px;
+            color: #71717a;
+        }
+
+        /* ========== CONTACTO ========== */
+        .contacto-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            background: #12131a;
+            border-radius: 24px;
+            padding: 48px;
+            border: 1px solid #1f1f28;
+        }
+
+        .contacto-text h3 {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+
+        .contacto-text p {
+            color: #71717a;
+            margin-bottom: 24px;
+        }
+
+        .contacto-beneficios {
+            list-style: none;
+        }
+
+        .contacto-beneficios li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .contacto-beneficios i {
+            color: #10b981;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            background: #1f1f28;
+            border: 1px solid #2a2a35;
+            border-radius: 12px;
+            color: white;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #8b5cf6;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .btn-enviar {
+            width: 100%;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            border: none;
+            padding: 14px;
+            border-radius: 40px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: #0f0f17;
+            padding: 60px 0 30px;
+            border-top: 1px solid #1f1f28;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo p {
+            color: #71717a;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-links a {
+            color: #71717a;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #8b5cf6;
+        }
+
+        .footer-links h4 {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #71717a;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #8b5cf6;
+        }
+
+        .footer-contact p {
+            margin-bottom: 12px;
+            color: #71717a;
+            font-size: 14px;
+        }
+
+        .footer-contact i {
+            width: 24px;
+            margin-right: 8px;
+            color: #8b5cf6;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #1f1f28;
+            color: #71717a;
+            font-size: 14px;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content,
+            .caso-grid,
+            .contacto-content,
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .servicios-grid,
+            .portafolio-grid,
+            .porque-grid,
+            .equipo-grid,
+            .testimonios-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-stats {
+                flex-wrap: wrap;
+                gap: 24px;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<!-- ========== HEADER PROFESIONAL ========== -->
+<!-- HEADER -->
 <header class="header">
-    <nav class="nav container">
-        <div class="logo">
-            <i class="fas fa-code"></i>
-            <span>Code<span class="highlight">Craft</span></span>
-        </div>
-        <ul class="nav-menu">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#portafolio">Portafolio</a></li>
-            <li><a href="#caso-exito">Caso VolTrix</a></li>
-            <li><a href="#equipo">Equipo</a></li>
-            <li><a href="#contacto" class="btn-contacto">Cotizar Proyecto</a></li>
-        </ul>
-        <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </div>
-    </nav>
+    <div class="container">
+        <nav class="nav">
+            <div class="logo">CodeCraft</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#caso">VolTrix</a></li>
+                <li><a href="#equipo">Equipo</a></li>
+                <li><a href="#contacto" class="btn-cotizar">Cotizar</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<!-- ========== HERO: VENDEMOS SERVICIOS ========== -->
+<!-- HERO -->
 <section id="inicio" class="hero">
-    <div class="container hero-content">
-        <div class="hero-text" data-aos="fade-right">
-            <div class="hero-badge">
-                <i class="fas fa-certificate"></i>
-                <span>+5 proyectos entregados en 2024-2025</span>
-            </div>
-            <h1>Desarrollamos <span class="highlight">páginas web profesionales</span> que venden y convierten</h1>
-            <p>Somos CodeCraft, una agencia especializada en desarrollo web a medida. Creamos sitios modernos, rápidos y optimizados para que tu negocio destaque en Internet.</p>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="number">5+</span>
-                    <span class="label">Proyectos entregados</span>
+    <div class="container">
+        <div class="hero-content">
+            <div>
+                <span class="hero-badge">🏆 Agencia certificada 2025</span>
+                <h1>Desarrollamos <span class="highlight">páginas web</span> que venden y convierten</h1>
+                <p>CodeCraft es una agencia especializada en desarrollo web a medida. Creamos sitios modernos, rápidos y optimizados para que tu negocio destaque.</p>
+                <div class="hero-stats">
+                    <div><span class="stat-number">5+</span><span class="stat-label">Proyectos</span></div>
+                    <div><span class="stat-number">100%</span><span class="stat-label">Satisfacción</span></div>
+                    <div><span class="stat-number">15</span><span class="stat-label">Días entrega</span></div>
                 </div>
-                <div class="stat">
-                    <span class="number">100%</span>
-                    <span class="label">Clientes satisfechos</span>
-                </div>
-                <div class="stat">
-                    <span class="number">15 días</span>
-                    <span class="label">Entrega promedio</span>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn-primary">Cotizar proyecto</a>
+                    <a href="#portafolio" class="btn-outline">Ver portafolio</a>
                 </div>
             </div>
-            <div class="hero-buttons">
-                <a href="#contacto" class="btn btn-primary">Cotizar mi proyecto <i class="fas fa-arrow-right"></i></a>
-                <a href="#portafolio" class="btn btn-outline">Ver portafolio <i class="fas fa-play"></i></a>
-            </div>
-        </div>
-        <div class="hero-image" data-aos="fade-left">
-            <div class="code-preview">
-                <div class="code-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                </div>
-                <div class="code-content">
-                    <pre><code>&lt;!-- Código que escribimos para ti --&gt;
-&lt;div class="<span class="code-blue">container</span>"&gt;
-    &lt;h1 class="<span class="code-blue">title</span>"&gt;
-        Tu negocio en línea
-    &lt;/h1&gt;
-    &lt;<span class="code-blue">button</span> <span class="code-green">onclick</span>=<span class="code-orange">"solicitar()"</span>&gt;
-        Contrátanos
-    &lt;/button&gt;
+            <div class="hero-code">
+                <div class="demo-dashboard" style="padding: 20px;">
+                    <div class="demo-header" style="border-bottom-color: #1f1f28;">
+                        <i class="fas fa-code"></i>
+                        <span style="color: #8b5cf6;">Código que escribimos para ti</span>
+                    </div>
+                    <pre style="color: #a1a1aa; font-size: 12px; overflow-x: auto;"><code>&lt;div class="container"&gt;
+    &lt;h1&gt;Tu negocio en línea&lt;/h1&gt;
+    &lt;button onclick="solicitar()"&gt;Contrátanos&lt;/button&gt;
 &lt;/div&gt;</code></pre>
                 </div>
             </div>
@@ -84,92 +833,85 @@
     </div>
 </section>
 
-<!-- ========== SERVICIOS ========== -->
-<section id="servicios" class="servicios">
+<!-- SERVICIOS -->
+<section id="servicios">
     <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <h2>Lo que hacemos por ti</h2>
+        <div class="section-header">
+            <h2>Lo que hacemos</h2>
             <p>Soluciones digitales a tu medida</p>
         </div>
         <div class="servicios-grid">
-            <div class="servicio-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="servicio-card">
                 <i class="fas fa-globe"></i>
                 <h3>Sitios Web Profesionales</h3>
-                <p>Diseño moderno, responsive y optimizado para todos los dispositivos.</p>
-                <div class="servicio-precio">Desde $500 USD</div>
+                <p>Diseño moderno y responsive para tu negocio</p>
+                <div class="precio">$500 <small>USD</small></div>
             </div>
-            <div class="servicio-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="servicio-card">
                 <i class="fas fa-store"></i>
-                <h3>Tiendas Online (E-commerce)</h3>
-                <p>Vende tus productos en línea con plataformas seguras y fáciles de usar.</p>
-                <div class="servicio-precio">Desde $1,200 USD</div>
+                <h3>Tiendas Online</h3>
+                <p>E-commerce completo para vender en línea</p>
+                <div class="precio">$1,200 <small>USD</small></div>
             </div>
-            <div class="servicio-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="servicio-card">
                 <i class="fas fa-chart-line"></i>
-                <h3>Dashboards y Paneles de Control</h3>
-                <p>Visualiza tus datos en tiempo real con dashboards interactivos.</p>
-                <div class="servicio-precio">Desde $800 USD</div>
+                <h3>Dashboards</h3>
+                <p>Paneles de control interactivos</p>
+                <div class="precio">$800 <small>USD</small></div>
             </div>
-            <div class="servicio-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="servicio-card">
                 <i class="fas fa-mobile-alt"></i>
                 <h3>Diseño Responsive</h3>
-                <p>Tu sitio se verá perfecto en computador, tablet y celular.</p>
-                <div class="servicio-precio">Incluido</div>
+                <p>Se ve perfecto en cualquier dispositivo</p>
+                <div class="precio">Incluido</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ========== PORTAFOLIO (MUESTRA TU TRABAJO) ========== -->
-<section id="portafolio" class="portafolio">
+<!-- PORTAFOLIO -->
+<section id="portafolio">
     <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header">
             <h2>Nuestro Portafolio</h2>
-            <p>Estos son algunos de los proyectos que hemos desarrollado</p>
+            <p>Proyectos que demuestran nuestra calidad</p>
         </div>
         <div class="portafolio-grid">
-            <div class="portafolio-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="portafolio-image">
+            <div class="portafolio-card">
+                <div class="portafolio-img">
                     <i class="fas fa-bolt"></i>
                 </div>
                 <div class="portafolio-info">
-                    <h3>VolTrix IoT Solution</h3>
-                    <p>Dashboard interactivo para monitoreo energético con alertas en tiempo real.</p>
+                    <h3>VolTrix IoT</h3>
+                    <p>Dashboard interactivo para monitoreo energético</p>
                     <div class="tech-tags">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>Chart.js</span>
+                        <span>HTML5</span><span>CSS3</span><span>JS</span>
                     </div>
-                    <a href="#caso-exito" class="portafolio-link">Ver caso de éxito →</a>
+                    <a href="#caso" class="portafolio-link">Ver caso →</a>
                 </div>
             </div>
-            <div class="portafolio-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="portafolio-image">
+            <div class="portafolio-card">
+                <div class="portafolio-img">
                     <i class="fas fa-shopping-cart"></i>
                 </div>
                 <div class="portafolio-info">
-                    <h3>MarketPlace Local</h3>
-                    <p>Tienda online con catálogo de productos y carrito de compras.</p>
+                    <h3>MarketPlace</h3>
+                    <p>Tienda online con carrito de compras</p>
                     <div class="tech-tags">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
+                        <span>React</span><span>Node.js</span>
                     </div>
-                    <a href="#contacto" class="portafolio-link">Proyecto reciente →</a>
+                    <a href="#contacto" class="portafolio-link">Ver proyecto →</a>
                 </div>
             </div>
-            <div class="portafolio-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="portafolio-image">
-                    <i class="fas fa-chalkboard-user"></i>
+            <div class="portafolio-card">
+                <div class="portafolio-img">
+                    <i class="fas fa-graduation-cap"></i>
                 </div>
                 <div class="portafolio-info">
                     <h3>Plataforma Educativa</h3>
-                    <p>Sistema de gestión de cursos y seguimiento de estudiantes.</p>
+                    <p>Sistema de gestión de cursos</p>
                     <div class="tech-tags">
-                        <span>Python/Django</span>
-                        <span>Bootstrap</span>
-                        <span>PostgreSQL</span>
+                        <span>Python</span><span>Django</span>
                     </div>
                     <a href="#contacto" class="portafolio-link">Ver proyecto →</a>
                 </div>
@@ -178,64 +920,54 @@
     </div>
 </section>
 
-<!-- ========== CASO DE ÉXITO: VolTrix (ESTRELLA) ========== -->
-<section id="caso-exito" class="caso-exito">
+<!-- CASO VOLTRIX (DEMO EN VIVO) -->
+<section id="caso" class="caso-voltrix">
     <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <h2>Caso de Éxito: <span class="highlight">VolTrix</span></h2>
+        <div class="section-header">
+            <h2>Caso de éxito: <span style="color:#8b5cf6;">VolTrix</span></h2>
             <p>El proyecto que demuestra lo que podemos hacer</p>
         </div>
         <div class="caso-grid">
-            <div class="caso-texto" data-aos="fade-right">
-                <div class="caso-badge">🌟 Proyecto Destacado</div>
+            <div>
+                <span class="caso-badge">⭐ Proyecto Destacado</span>
                 <h3>Dashboard Inteligente de Monitoreo Energético</h3>
-                <p>VolTrix es un sistema completo que creamos para demostrar nuestra capacidad de desarrollar aplicaciones web complejas con:</p>
+                <p>VolTrix es un sistema completo que creamos para demostrar nuestra capacidad de desarrollar aplicaciones web complejas.</p>
                 <ul class="caso-lista">
                     <li><i class="fas fa-check-circle"></i> Datos en tiempo real</li>
                     <li><i class="fas fa-check-circle"></i> Gráficos interactivos</li>
                     <li><i class="fas fa-check-circle"></i> Alertas automáticas</li>
                     <li><i class="fas fa-check-circle"></i> Diseño responsive</li>
-                    <li><i class="fas fa-check-circle"></i> Panel de control profesional</li>
                 </ul>
                 <div class="caso-metricas">
-                    <div class="metrica">
-                        <span class="numero">500+</span>
-                        <span class="label">Visitas demo</span>
-                    </div>
-                    <div class="metrica">
-                        <span class="numero">100%</span>
-                        <span class="label">Funcionalidad</span>
-                    </div>
-                    <div class="metrica">
-                        <span class="numero">15 días</span>
-                        <span class="label">Tiempo desarrollo</span>
-                    </div>
+                    <div><span class="numero">500+</span><span class="label">Visitas demo</span></div>
+                    <div><span class="numero">100%</span><span class="label">Funcionalidad</span></div>
+                    <div><span class="numero">15</span><span class="label">Días desarrollo</span></div>
                 </div>
-                <a href="https://voltrix.onrender.com" target="_blank" class="btn btn-primary">Ver Demo en Vivo <i class="fas fa-external-link-alt"></i></a>
+                <a href="https://voltrix.onrender.com" target="_blank" class="btn-primary" style="display: inline-block;">Ver demo completa →</a>
             </div>
-            <div class="caso-demo" data-aos="fade-left">
-                <div class="demo-mini">
+            <div>
+                <div class="demo-dashboard">
                     <div class="demo-header">
                         <i class="fas fa-bolt"></i>
-                        <span>VolTrix Dashboard</span>
+                        <span style="font-weight: 600;">VolTrix Dashboard</span>
                     </div>
                     <div class="demo-stats">
                         <div class="demo-stat">
-                            <span class="stat-label">Consumo</span>
-                            <span class="stat-value" id="demo-consumo">0.00</span>
-                            <span>kW</span>
+                            <span class="label">Consumo actual</span>
+                            <span class="value" id="demo-consumo">0.00</span>
+                            <span style="font-size: 12px;">kW</span>
                         </div>
                         <div class="demo-stat">
-                            <span class="stat-label">Ahorro</span>
-                            <span class="stat-value" id="demo-ahorro">0</span>
-                            <span>%</span>
+                            <span class="label">Ahorro estimado</span>
+                            <span class="value" id="demo-ahorro">0</span>
+                            <span style="font-size: 12px;">%</span>
                         </div>
                     </div>
                     <div class="demo-alerta" id="demo-alerta">
-                        ✅ Sistema funcionando
+                        ✅ Sistema funcionando correctamente
                     </div>
-                    <div class="demo-link">
-                        <a href="https://voltrix.onrender.com" target="_blank">Ver dashboard completo →</a>
+                    <div style="margin-top: 16px; font-size: 12px; color: #71717a; text-align: center;">
+                        Datos actualizados en tiempo real
                     </div>
                 </div>
             </div>
@@ -243,204 +975,196 @@
     </div>
 </section>
 
-<!-- ========== POR QUÉ ELEGIRNOS ========== -->
-<section id="porque" class="porque">
+<!-- POR QUÉ ELEGIRNOS -->
+<section>
     <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header">
             <h2>¿Por qué confiar en nosotros?</h2>
             <p>Razones para elegir a CodeCraft</p>
         </div>
         <div class="porque-grid">
-            <div class="porque-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="porque-card">
                 <i class="fas fa-palette"></i>
-                <h3>Diseño Personalizado</h3>
-                <p>No usamos plantillas genéricas. Cada sitio es único y adaptado a tu marca.</p>
+                <h4>Diseño Personalizado</h4>
+                <p>No usamos plantillas. Cada sitio es único.</p>
             </div>
-            <div class="porque-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="porque-card">
                 <i class="fas fa-code"></i>
-                <h3>Código Limpio y Moderno</h3>
-                <p>Trabajamos con las últimas tecnologías: HTML5, CSS3, JavaScript, React, Python.</p>
+                <h4>Código Moderno</h4>
+                <p>Tecnologías actuales: React, Python, Node.js</p>
             </div>
-            <div class="porque-card" data-aos="fade-up" data-aos-delay="300">
-                <i class="fas fa-mobile"></i>
-                <h3>100% Responsive</h3>
-                <p>Tu sitio se verá perfecto en cualquier dispositivo: computador, tablet o celular.</p>
+            <div class="porque-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h4>100% Responsive</h4>
+                <p>Se ve perfecto en cualquier dispositivo</p>
             </div>
-            <div class="porque-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="porque-card">
                 <i class="fas fa-headset"></i>
-                <h3>Soporte Post-Entrega</h3>
-                <p>No te dejamos solo. Te acompañamos después de entregar el proyecto.</p>
+                <h4>Soporte Post-Entrega</h4>
+                <p>Te acompañamos después del proyecto</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ========== COMPARATIVA: NOSOTROS VS OTROS ========== -->
-<section class="comparativa">
+<!-- COMPARATIVA -->
+<section style="background: #0f0f17;">
     <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <h2>¿Por qué elegirnos y no a otros?</h2>
-            <p>Comparativa con agencias tradicionales y freelancers</p>
+        <div class="section-header">
+            <h2>¿Por qué elegirnos?</h2>
+            <p>Comparativa con agencias tradicionales</p>
         </div>
-        <div class="comparativa-table" data-aos="fade-up">
+        <div class="comparativa-table">
             <table>
                 <thead>
                     <tr>
                         <th>Característica</th>
                         <th>CodeCraft</th>
-                        <th>Agencias Tradicionales</th>
-                        <th>Freelancers</th>
+                        <th>Agencias tradicionales</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>Precios competitivos</td><td class="check">✅</td><td class="cross">❌ (Altos)</td><td class="check">✅</td></tr>
-                    <tr><td>Atención personalizada</td><td class="check">✅</td><td class="cross">❌</td><td class="check">✅</td></tr>
-                    <tr><td>Garantía post-entrega</td><td class="check">✅</td><td class="check">✅</td><td class="cross">❌</td></tr>
-                    <tr><td>Diseños únicos</td><td class="check">✅</td><td class="check">✅</td><td class="cross">❌ (Usan plantillas)</td></tr>
-                    <tr><td>Tecnologías modernas</td><td class="check">✅</td><td class="check">✅</td><td class="cross">❌</td></tr>
-                    <tr><td>Tiempo de entrega</td><td class="check">15-20 días</td><td class="check">30-45 días</td><td class="check">Variable</td></tr>
+                    <tr><td>Precios competitivos</td><td class="check">✅</td><td class="cross">❌</td></tr>
+                    <tr><td>Atención personalizada</td><td class="check">✅</td><td class="cross">❌</td></tr>
+                    <tr><td>Garantía post-entrega</td><td class="check">✅</td><td class="check">✅</td></tr>
+                    <tr><td>Diseños 100% únicos</td><td class="check">✅</td><td class="cross">❌</td></tr>
+                    <tr><td>Tecnologías modernas</td><td class="check">✅</td><td class="check">✅</td></tr>
+                    <tr><td>Tiempo de entrega</td><td>15-20 días</td><td>30-45 días</td></tr>
                 </tbody>
             </table>
         </div>
     </div>
 </section>
 
-<!-- ========== EQUIPO ========== -->
-<section id="equipo" class="equipo">
+<!-- EQUIPO -->
+<section id="equipo">
     <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <h2>Los que hacemos posible tus ideas</h2>
-            <p>Conoce al equipo detrás de CodeCraft</p>
+        <div class="section-header">
+            <h2>El equipo detrás de CodeCraft</h2>
+            <p>Estudiantes de Ingeniería de Sistemas - CUN</p>
         </div>
         <div class="equipo-grid">
-            <div class="miembro-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="miembro-icon"><i class="fas fa-user-graduate"></i></div>
-                <h3>Michael Salcedo Diaz</h3>
-                <p>CEO & Lead Developer</p>
-                <p class="miembro-bio">+5 años de experiencia en desarrollo web full-stack</p>
+            <div class="miembro-card">
+                <i class="fas fa-user-circle"></i>
+                <h4>Michael Salcedo</h4>
+                <div class="rol">CEO & Lead Developer</div>
+                <div class="bio">+5 años de experiencia en desarrollo full-stack</div>
             </div>
-            <div class="miembro-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="miembro-icon"><i class="fas fa-user-graduate"></i></div>
-                <h3>Roberto C. Arbelaez</h3>
-                <p>Frontend Specialist</p>
-                <p class="miembro-bio">Experto en interfaces de usuario y experiencia digital</p>
+            <div class="miembro-card">
+                <i class="fas fa-user-circle"></i>
+                <h4>Roberto Arbelaez</h4>
+                <div class="rol">Frontend Specialist</div>
+                <div class="bio">Experto en interfaces de usuario</div>
             </div>
-            <div class="miembro-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="miembro-icon"><i class="fas fa-user-graduate"></i></div>
-                <h3>Eduardo Jimenez</h3>
-                <p>UI/UX Designer</p>
-                <p class="miembro-bio">Crea experiencias visuales que cautivan usuarios</p>
+            <div class="miembro-card">
+                <i class="fas fa-user-circle"></i>
+                <h4>Eduardo Jimenez</h4>
+                <div class="rol">UI/UX Designer</div>
+                <div class="bio">Diseños que cautivan usuarios</div>
             </div>
-            <div class="miembro-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="miembro-icon"><i class="fas fa-user-graduate"></i></div>
-                <h3>Luis Felipe Gracia</h3>
-                <p>Backend Developer</p>
-                <p class="miembro-bio">Especialista en bases de datos y APIs robustas</p>
+            <div class="miembro-card">
+                <i class="fas fa-user-circle"></i>
+                <h4>Luis Felipe Gracia</h4>
+                <div class="rol">Backend Developer</div>
+                <div class="bio">Especialista en bases de datos y APIs</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ========== TESTIMONIOS (CLIENTES FICTICIOS PERO CREÍBLES) ========== -->
-<section id="testimonios" class="testimonios">
+<!-- TESTIMONIOS -->
+<section style="background: #0f0f17;">
     <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header">
             <h2>Lo que dicen nuestros clientes</h2>
             <p>Proyectos que hablan por sí mismos</p>
         </div>
         <div class="testimonios-grid">
-            <div class="testimonio-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonio-card">
                 <i class="fas fa-quote-left"></i>
-                <p>"El equipo de CodeCraft superó mis expectativas. La página web que me entregaron es exactamente lo que necesitaba y mis ventas aumentaron un 40%."</p>
-                <div class="testimonio-author">
-                    <strong>Carlos Méndez</strong>
-                    <span>EcoTienda Colombia</span>
-                </div>
+                <p>"Superaron mis expectativas. Mis ventas en línea aumentaron un 40%."</p>
+                <h5>Carlos Méndez</h5>
+                <span>EcoTienda Colombia</span>
             </div>
-            <div class="testimonio-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonio-card">
                 <i class="fas fa-quote-left"></i>
-                <p>"Entregaron antes del plazo acordado y con una calidad impresionante. Sin duda los recomendaría a cualquier negocio que quiera crecer en línea."</p>
-                <div class="testimonio-author">
-                    <strong>Ana Rodríguez</strong>
-                    <span>Moda Express</span>
-                </div>
+                <p>"Entregaron antes del plazo con una calidad impresionante. 100% recomendados."</p>
+                <h5>Ana Rodríguez</h5>
+                <span>Moda Express</span>
             </div>
-            <div class="testimonio-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonio-card">
                 <i class="fas fa-quote-left"></i>
-                <p>""Profesionales, atentos y con gran conocimiento técnico. El dashboard que desarrollaron para nuestro proyecto es una maravilla.""</p>
-                <div class="testimonio-author">
-                    <strong>Laura Gómez</strong>
-                    <span>Energy Solutions</span>
-                </div>
+                <p>"El dashboard que desarrollaron para nosotros es una maravilla tecnológica."</p>
+                <h5>Laura Gómez</h5>
+                <span>Energy Solutions</span>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ========== CONTACTO / COTIZACIÓN ========== -->
-<section id="contacto" class="contacto">
+<!-- CONTACTO -->
+<section id="contacto">
     <div class="container">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header">
             <h2>¿Listo para tener tu página web?</h2>
             <p>Cuéntanos tu proyecto y te daremos una cotización sin compromiso</p>
         </div>
-        <div class="contacto-content" data-aos="fade-up">
-            <div class="contacto-form">
+        <div class="contacto-content">
+            <div>
+                <h3>Hablemos de tu proyecto</h3>
+                <p>Completa el formulario y te responderemos en menos de 24 horas.</p>
+                <ul class="contacto-beneficios">
+                    <li><i class="fas fa-check-circle"></i> Cotización sin compromiso</li>
+                    <li><i class="fas fa-check-circle"></i> Asesoría personalizada</li>
+                    <li><i class="fas fa-check-circle"></i> Garantía de satisfacción</li>
+                </ul>
+                <div style="margin-top: 32px;">
+                    <p><i class="fas fa-envelope"></i> hola@codecraft.com</p>
+                    <p><i class="fas fa-phone"></i> +57 300 123 4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia</p>
+                </div>
+            </div>
+            <div>
                 <form id="formContacto">
                     <div class="form-row">
-                        <input type="text" placeholder="Nombre completo" required>
-                        <input type="email" placeholder="Correo electrónico" required>
+                        <div class="form-group">
+                            <input type="text" placeholder="Nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Correo electrónico" required>
+                        </div>
                     </div>
                     <div class="form-row">
-                        <input type="tel" placeholder="Teléfono">
-                        <select>
-                            <option value="">Tipo de proyecto</option>
-                            <option>Sitio Web Corporativo</option>
-                            <option>Tienda Online (E-commerce)</option>
-                            <option>Dashboard / Panel de Control</option>
-                            <option>Landing Page</option>
-                            <option>Otro</option>
-                        </select>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Teléfono">
+                        </div>
+                        <div class="form-group">
+                            <select>
+                                <option value="">Tipo de proyecto</option>
+                                <option>Sitio Web Corporativo</option>
+                                <option>Tienda Online</option>
+                                <option>Dashboard</option>
+                                <option>Landing Page</option>
+                            </select>
+                        </div>
                     </div>
-                    <textarea placeholder="Cuéntanos sobre tu proyecto... ¿Qué necesitas? ¿Para cuándo lo necesitas?" rows="4"></textarea>
-                    <button type="submit" class="btn btn-primary btn-block">Solicitar cotización <i class="fas fa-arrow-right"></i></button>
-                    <p class="form-note">* Te responderemos en menos de 24 horas</p>
+                    <div class="form-group">
+                        <textarea rows="4" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-enviar">Solicitar cotización →</button>
+                    <p style="font-size: 12px; color: #71717a; text-align: center; margin-top: 16px;">* Te responderemos en menos de 24 horas</p>
                 </form>
-            </div>
-            <div class="contacto-info">
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h4>Email</h4>
-                        <p>hola@codecraft.com</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h4>Teléfono</h4>
-                        <p>+57 300 123 4567</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-clock"></i>
-                    <div>
-                        <h4>Respuesta</h4>
-                        <p>En menos de 24 horas</p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ========== FOOTER ========== -->
+<!-- FOOTER -->
 <footer class="footer">
     <div class="container">
         <div class="footer-content">
-            <div class="footer-logo">
-                <i class="fas fa-code"></i>
-                <span>Code<span class="highlight">Craft</span></span>
+            <div>
+                <div class="logo" style="font-size: 24px;">CodeCraft</div>
                 <p>Desarrollamos páginas web profesionales que venden y convierten.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -448,39 +1172,88 @@
                     <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="footer-links">
+            <div>
                 <h4>Navegación</h4>
                 <ul>
+                    <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#portafolio">Portafolio</a></li>
-                    <li><a href="#caso-exito">Caso VolTrix</a></li>
                     <li><a href="#contacto">Cotizar</a></li>
                 </ul>
             </div>
-            <div class="footer-links">
-                <h4>Tecnologías que usamos</h4>
+            <div>
+                <h4>Tecnologías</h4>
                 <ul>
-                    <li>HTML5 / CSS3 / JavaScript</li>
+                    <li>HTML5 / CSS3 / JS</li>
                     <li>React / Vue.js</li>
-                    <li>Python / Django / Flask</li>
-                    <li>Node.js / Express</li>
+                    <li>Python / Django</li>
+                    <li>Node.js</li>
                 </ul>
             </div>
-            <div class="footer-contact">
-                <h4>Contacto directo</h4>
+            <div>
+                <h4>Contacto</h4>
                 <p><i class="fas fa-envelope"></i> hola@codecraft.com</p>
                 <p><i class="fas fa-phone"></i> +57 300 123 4567</p>
                 <p><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 CodeCraft - Agencia de Desarrollo Web</p>
+            <p>&copy; 2025 CodeCraft - Agencia de Desarrollo Web</p>
             <p>Estudiantes de Ingeniería de Sistemas - CUN</p>
         </div>
     </div>
 </footer>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="js/main.js"></script>
+<script>
+    // Demo en vivo del dashboard de VolTrix
+    let consumoDemo = 0.5;
+    
+    function actualizarDemo() {
+        consumoDemo = consumoDemo * 0.7 + (Math.random() * 3 + 0.5) * 0.3;
+        consumoDemo = Math.min(5, Math.max(0.2, consumoDemo));
+        
+        const ahorroDemo = Math.max(0, Math.round(((2.5 - consumoDemo) / 2.5) * 100));
+        
+        document.getElementById('demo-consumo').innerText = consumoDemo.toFixed(2);
+        document.getElementById('demo-ahorro').innerText = ahorroDemo;
+        
+        const alertaDiv = document.getElementById('demo-alerta');
+        if (consumoDemo > 4) {
+            alertaDiv.innerHTML = '⚠️ ALERTA: Consumo muy elevado!';
+            alertaDiv.style.borderLeftColor = '#ef4444';
+            alertaDiv.style.background = 'rgba(239, 68, 68, 0.1)';
+        } else if (consumoDemo > 3) {
+            alertaDiv.innerHTML = '📈 Consumo elevado. Revisa tus electrodomésticos.';
+            alertaDiv.style.borderLeftColor = '#f59e0b';
+            alertaDiv.style.background = 'rgba(245, 158, 11, 0.1)';
+        } else {
+            alertaDiv.innerHTML = '✅ Consumo óptimo. ¡Sigue así! Ahorro: ' + ahorroDemo + '%';
+            alertaDiv.style.borderLeftColor = '#10b981';
+            alertaDiv.style.background = 'rgba(16, 185, 129, 0.1)';
+        }
+    }
+    
+    setInterval(actualizarDemo, 3000);
+    actualizarDemo();
+    
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+    
+    // Formulario
+    document.getElementById('formContacto').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('¡Gracias por contactarnos! Un asesor te responderá en menos de 24 horas.');
+        this.reset();
+    });
+</script>
+
 </body>
 </html>
